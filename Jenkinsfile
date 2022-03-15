@@ -8,7 +8,7 @@ pipeline {
     stage('Enter to Terraform folder') {
       steps {
         sh 'cd Terraform/'
-        sh "export AWS_REGION="ap-northeast-1" 
+        sh 'export AWS_REGION="ap-northeast-1'
       }
     }
 
