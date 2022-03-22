@@ -20,7 +20,13 @@ pipeline {
     
     stage('Terraform apply') {
       steps {
-        sh label: '', script: 'terraform apply --auto-approve'
+        sh label: '', script: 'ls'
+      }
+    }
+        
+    stage('Terraform apply') {
+      steps {
+        sh label: '', script: 'pwd'
       }
     }
   }
