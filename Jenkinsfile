@@ -19,14 +19,11 @@ pipeline {
     
     stage('Terraform ls') {
       steps {
-        sh 'cd Terraform/'
+        dir('Terraform') {
+            sh "pwd"
+          }
       }
     }
         
-    stage('Terraform pwd') {
-      steps {
-        sh label: '', script: 'pwd'
-      }
-    }
   }
 }
