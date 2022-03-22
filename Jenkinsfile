@@ -11,16 +11,12 @@ pipeline {
       }
     }
 
-    stage('Terraform Init') {
-      steps {
-        sh label: '', script: 'terraform init'
-      }
-    }
     
-    stage('Terraform ls') {
+    stage('Terraform init') {
       steps {
         dir('Terraform') {
-            sh "pwd"
+            sh 'terraform init '
+            sh 'terraform plan '
           }
       }
     }
