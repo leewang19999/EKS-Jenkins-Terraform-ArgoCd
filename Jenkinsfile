@@ -18,13 +18,13 @@ pipeline {
       }
     }
     
-    stage('Terraform apply') {
+    stage('Terraform ls') {
       steps {
         sh label: '', script: 'ls'
       }
     }
         
-    stage('Terraform apply') {
+    stage('Terraform pwd') {
       steps {
         sh label: '', script: 'pwd'
       }
